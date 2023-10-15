@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4</title>
+    <link rel="stylesheet" href="ini.css">
+    <script src="inicio.js"></script>
+
+    
+</head>
+<body>
+    <div id="login-form">
+        
+        <img src="./assets/F1.png" alt="Logo">
+        <p>TAREA 4</p>
+        <P>LOGIN DIVERTIDO</P>
+        <form>
+            <input type="text" placeholder="Usuario" required>
+            <div class="password-container">
+                <input type="password" placeholder="Contraseña" required id="password">
+                <span class="password-ojito" onclick="ojito(this)">👁️</span>
+            </div>
+            <button type="button" id="login-button" onclick="simuladorLogin()">Ingresar</button>
+           
+        </form>
+        
+    </div>
+
+    <div id="loader-container">
+        <div id="loader"></div>
+    </div>
+
+    <audio id="click-sound">
+        <source src="./assets/audio.mp3" type="audio/mpeg">
+        
+    </audio>
+
+    
+</body>
+</html>
