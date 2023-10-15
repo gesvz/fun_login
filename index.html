@@ -17,7 +17,7 @@
         <P>LOGIN DIVERTIDO</P>
         <form>
             <input id="user" type="text" placeholder="Usuario" required>
-            <div class="password-container" id="pw-wrapper">
+            <div class="password-container">
                 <input type="password" placeholder="Contraseña" required id="password">
                 <span class="password-ojito" onclick="ojito(this)">👁️</span>
             </div>
@@ -27,8 +27,9 @@
         </form>
         
     </div>
-
     <div id="loader-container">
+        <p id="success">Has ingresado, exitosamente...</p>
+        <br>
         <div id="loader"></div>
     </div>
 

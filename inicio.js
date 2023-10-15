@@ -20,15 +20,17 @@ function simuladorLogin() {
 
     const userInput = document.getElementById('user');
     const passwordInput = document.getElementById('password');
-    
+    const loginText = document.getElementById('success');
 
-    if(userInput.value === 'u' && passwordInput.value === 'pw' ){
+    if(userInput.value !== ""){
     
     // Reproducir el sonido al hacer clic en el botón
     clickSound.play();
 
     loginForm.style.display = 'none';
-    loaderContainer.style.display = 'block';
+    loaderContainer.style.display = 'flex';
+    loaderContainer.style.flexDirection = 'column';
+    loaderContainer.style.alignItems = 'center';
 
     setTimeout(() => {
         loaderContainer.style.display = 'none';
