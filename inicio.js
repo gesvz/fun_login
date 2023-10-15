@@ -54,6 +54,6 @@ function playVideo() {
     const video = document.createElement('video');
     video.src = './assets/video.mp4'; 
     video.autoplay = true;
-    video.loop = true;
+    //video.loop = true;
     document.body.appendChild(video);
 }
