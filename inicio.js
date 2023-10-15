@@ -18,6 +18,12 @@ function simuladorLogin() {
     const loaderContainer = document.getElementById('loader-container');
     const clickSound = document.getElementById('click-sound');
 
+    const userInput = document.getElementById('user');
+    const passwordInput = document.getElementById('password');
+    
+
+    if(userInput.value === 'u' && passwordInput.value === 'pw' ){
+    
     // Reproducir el sonido al hacer clic en el botón
     clickSound.play();
 
@@ -29,6 +35,14 @@ function simuladorLogin() {
         loginForm.classList.add('show');
         playVideo();
     }, 12000);
+
+    } else {
+        userInput.style.border = '2px solid red';
+        passwordInput.style.border = '2px solid red';
+
+        const failLogin = document.getElementById('fail-login');
+        failLogin.style.display = 'block';
+    }
 }
 
 /*simulador */ 

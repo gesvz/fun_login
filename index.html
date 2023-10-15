@@ -16,11 +16,12 @@
         <p>TAREA 4</p>
         <P>LOGIN DIVERTIDO</P>
         <form>
-            <input type="text" placeholder="Usuario" required>
-            <div class="password-container">
+            <input id="user" type="text" placeholder="Usuario" required>
+            <div class="password-container" id="pw-wrapper">
                 <input type="password" placeholder="Contraseña" required id="password">
                 <span class="password-ojito" onclick="ojito(this)">👁️</span>
             </div>
+            <p id="fail-login">Usuario o contraseña no válidos</p>
             <button type="button" id="login-button" onclick="simuladorLogin()">Ingresar</button>
            
         </form>
