@@ -31,6 +31,7 @@ function simuladorLogin() {
 
     if(userInput.value !== ""){
 
+        //clear inputs
         userInput.value = "";
         passwordInput.value = "";
         // Reproducir el sonido al hacer clic en el botón
@@ -41,6 +42,7 @@ function simuladorLogin() {
         loaderContainer.style.flexDirection = 'column';
         loaderContainer.style.alignItems = 'center';
 
+        //reset failLogin styles
         userInput.style.border = '0px';
         passwordInput.style.border = '0px';
         failLogin.style.display = 'none';
