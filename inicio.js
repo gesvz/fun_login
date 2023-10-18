@@ -27,6 +27,8 @@ function simuladorLogin() {
     const passwordInput = document.getElementById('password');
     //const loginText = document.getElementById('success');
 
+    const failLogin = document.getElementById('fail-login');
+
     if(userInput.value !== ""){
 
         userInput.value = "";
@@ -39,18 +41,20 @@ function simuladorLogin() {
         loaderContainer.style.flexDirection = 'column';
         loaderContainer.style.alignItems = 'center';
 
+        userInput.style.border = '0px';
+        passwordInput.style.border = '0px';
+        failLogin.style.display = 'none';
+
         setTimeout(() => {
             loaderContainer.style.display = 'none';
             loginForm.classList.add('show');
             playVideo();
         }, 12000);
 
-
     } else {
         userInput.style.border = '2px solid red';
         passwordInput.style.border = '2px solid red';
 
-        const failLogin = document.getElementById('fail-login');
         failLogin.style.display = 'block';
     }
 }
@@ -75,6 +79,7 @@ function playVideo() {
 
 function regresarAlFormulario() {    
     
+    //or simply reload
     //window.location.reload();
     
     const video = document.querySelector('video');
