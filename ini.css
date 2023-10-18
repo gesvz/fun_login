@@ -94,6 +94,10 @@ body {
     align-items: center;
 }
 
+.password-ojito {
+    position: relative;
+    right: 20px;
+}
 
 #loader-container {
     display: none;
