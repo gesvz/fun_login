@@ -1,6 +1,7 @@
 const video = document.createElement('video');
 video.src = './assets/video.mp4';
-
+//buffer video at the start
+video.preload = 'auto';
 
 /*ojito*/ 
 function ojito(icon) {
@@ -8,10 +9,10 @@ function ojito(icon) {
 
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        icon.textContent = '🙈';
+        icon.textContent = '👁️';
     } else {
         passwordInput.type = 'password';
-        icon.textContent = '👁️';
+        icon.textContent = '🙈';
     }
 }
 /*ojito*/ 
@@ -24,23 +25,26 @@ function simuladorLogin() {
 
     const userInput = document.getElementById('user');
     const passwordInput = document.getElementById('password');
-    const loginText = document.getElementById('success');
+    //const loginText = document.getElementById('success');
 
     if(userInput.value !== ""){
-    
-    // Reproducir el sonido al hacer clic en el botón
-    clickSound.play();
 
-    loginForm.style.display = 'none';
-    loaderContainer.style.display = 'flex';
-    loaderContainer.style.flexDirection = 'column';
-    loaderContainer.style.alignItems = 'center';
+        userInput.value = "";
+        passwordInput.value = "";
+        // Reproducir el sonido al hacer clic en el botón
+        clickSound.play();
 
-    setTimeout(() => {
-        loaderContainer.style.display = 'none';
-        loginForm.classList.add('show');
-        playVideo();
-    }, 12000);
+        loginForm.style.display = 'none';
+        loaderContainer.style.display = 'flex';
+        loaderContainer.style.flexDirection = 'column';
+        loaderContainer.style.alignItems = 'center';
+
+        setTimeout(() => {
+            loaderContainer.style.display = 'none';
+            loginForm.classList.add('show');
+            playVideo();
+        }, 12000);
+
 
     } else {
         userInput.style.border = '2px solid red';
@@ -55,11 +59,10 @@ function simuladorLogin() {
 
 /*video */ 
 function playVideo() {
-    //const video = document.createElement('video');
-    //video.src = './assets/video.mp4';
+
     video.play();
     video.addEventListener('ended', function () {
-        const botonRegresar = document.getElementById('return-button');
+        const botonRegresar = document.getElementById('return-button');        
         botonRegresar.style.display = 'block'; // Mostrar el botón cuando termine el video
     });
     document.body.appendChild(video);
@@ -70,7 +73,10 @@ function playVideo() {
 
 /*Regresar al formulario*/ 
 
-function regresarAlFormulario() {
+function regresarAlFormulario() {    
+    
+    //window.location.reload();
+    
     const video = document.querySelector('video');
     const returnButton = document.getElementById('return-button');
     const loginForm = document.getElementById('login-form');
@@ -84,6 +90,7 @@ function regresarAlFormulario() {
 
     // Muestra el formulario de inicio de sesión
     loginForm.style.display = 'block';
+    
 }
 /*Regresar al formulario*/
 
