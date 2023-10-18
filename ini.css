@@ -9,6 +9,7 @@ body {
     margin: 0;
 }
 
+
 #login-form {
     background-color: transparent;
     background-size: cover;
@@ -19,7 +20,9 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: #fff;
     transform: translateY(20px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    position: relative; 
+    overflow: hidden;
 }
 
  #login-form:hover {
@@ -29,13 +32,31 @@ body {
     transform: rotate(2deg) scale(1.00); 
     transition: transform 0.3s ease;
     color: black;
+    animation: vibrar 0.2s ease-in-out 0.20s;
             
 }
-
+@keyframes vibrar {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
 #login-form img {
     max-width: 150px;
     margin: 0 auto;
+    border-radius: 20px;
 }
 
 #login-form p {
@@ -113,4 +134,26 @@ video {
     color: red;
     background-color: white; 
     display: none;
+    border-radius: 3px;
 }
+
+/* Estilo del botón para regresar al formulario */
+#return-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    /* Define la imagen de fondo */
+    background-image: url('./assets/F4.jpg');
+    background-size: cover; /* Ajusta el tamaño de la imagen */
+    background-position: center; /* Centra la imagen */
+}
+
+/* Estilo al pasar el cursor sobre el botón (opcional) */
+#return-button:hover {
+    /* Puedes agregar estilos adicionales al botón al pasar el cursor sobre él */
+    transform: scale(1.1);
+}
+

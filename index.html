@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarea 4</title>
     <link rel="stylesheet" href="ini.css">
-    <script src="inicio.js"></script>
-
     
 </head>
 <body>
@@ -23,10 +21,12 @@
             </div>
             <p id="fail-login">Usuario o contraseña no válidos</p>
             <button type="button" id="login-button" onclick="simuladorLogin()">Ingresar</button>
-           
+            
+
         </form>
-        
     </div>
+        <button id="return-button" onclick="regresarAlFormulario()" style="display: none;">Regresar al formulario</button>
+   
     <div id="loader-container">
         <p id="success">Has ingresado, exitosamente...</p>
         <br>
@@ -37,7 +37,9 @@
         <source src="./assets/audio.mp3" type="audio/mpeg">
         
     </audio>
+    
 
     
 </body>
+<script src="inicio.js"></script>
 </html>

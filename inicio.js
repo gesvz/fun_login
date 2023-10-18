@@ -1,3 +1,7 @@
+const video = document.createElement('video');
+video.src = './assets/video.mp4';
+
+
 /*ojito*/ 
 function ojito(icon) {
     const passwordInput = document.getElementById('password');
@@ -51,9 +55,36 @@ function simuladorLogin() {
 
 /*video */ 
 function playVideo() {
-    const video = document.createElement('video');
-    video.src = './assets/video.mp4'; 
-    video.autoplay = true;
-    //video.loop = true;
+    //const video = document.createElement('video');
+    //video.src = './assets/video.mp4';
+    video.play();
+    video.addEventListener('ended', function () {
+        const botonRegresar = document.getElementById('return-button');
+        botonRegresar.style.display = 'block'; // Mostrar el botón cuando termine el video
+    });
     document.body.appendChild(video);
 }
+
+
+/*video */ 
+
+/*Regresar al formulario*/ 
+
+function regresarAlFormulario() {
+    const video = document.querySelector('video');
+    const returnButton = document.getElementById('return-button');
+    const loginForm = document.getElementById('login-form');
+
+    // Pausa y oculta el video
+    video.pause();
+    video.style.display = 'none';
+
+    // Oculta el botón de regreso
+    returnButton.style.display = 'none';
+
+    // Muestra el formulario de inicio de sesión
+    loginForm.style.display = 'block';
+}
+/*Regresar al formulario*/
+
+/*efecto de sangre*/
