@@ -45,6 +45,9 @@ function simuladorLogin() {
         passwordInput.style.border = '0px';
         failLogin.style.display = 'none';
 
+        const ojito = document.getElementsByClassName("password-ojito");
+        ojito.textContent = '🙈';
+
         setTimeout(() => {
             loaderContainer.style.display = 'none';
             loginForm.classList.add('show');
