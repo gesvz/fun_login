@@ -96,6 +96,7 @@ body {
 
 .password-ojito {
     position: relative;
+    /*move eye inside input*/
     right: 20px;
 }
 

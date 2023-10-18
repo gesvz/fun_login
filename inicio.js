@@ -69,6 +69,7 @@ function simuladorLogin() {
 /*video */ 
 function playVideo() {
 
+    video.style.display = 'block';
     video.play();
     video.addEventListener('ended', function () {
         const botonRegresar = document.getElementById('return-button');        
